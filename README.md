@@ -3,7 +3,7 @@
 This repository contains the official MATLAB implementation for the paper **"Psychophysical Comparison of Distance Measures for Evaluating Color Constancy Algorithms"**.
 
 The code provides a framework for:
-1.  **Preprocessing** dataset images using Ground Truth (GT) or White Balance (WB) algorithms.
+1.  **Preprocessing** dataset images (the ColorChecker RECommended dataset) using Ground Truth (GT) or White Balance (WB) algorithms.
 2.  **Calculating** various color constancy error metrics and their correlations with subjective psychophysical ratings.
 3.  **Benchmarking** the computational runtime of different metrics.
 
@@ -22,10 +22,10 @@ The code provides a framework for:
 ## 🚀 Usage
 
 ### 1. Image Preprocessing
-Use `Main_Preprocessing.m` (inside the `PreProcessing` folder) to generate the image datasets required for subjective experiments. This script processes raw images by applying specific illuminant corrections and color space transformations.
+Use `Main_Preprocessing.m` (inside the `PreProcessing` folder) to generate the image datasets (based on the ColorChecker RECommended dataset) required for subjective experiments. This script processes raw images by applying specific illuminant corrections and color space transformations.
 
 **Workflow:**
-* **Input:** Loads raw images (without MCC) and illuminant data (GT or Algorithm estimates).
+* **Input:** Loads raw images from the ColorChecker RECommended dataset (without MCC) and illuminant RGB data (GT or Algorithm estimates).
 * **Processing Steps:**
     1.  **White Balance Correction:** Normalizes R and B channels relative to G based on the illuminant vector.
     2.  **Color Space Transformation:** Converts images to target spaces (e.g., RGB, XYZ, LMS).
